@@ -1,0 +1,8 @@
+Comandi per Avviarlo
+Trattandosi di un'applicazione autonoma situata all'interno del pacchetto di depurazione (remover), la classe viene eseguita richiamando direttamente il metodo principale (Main.java) del pacchetto:
+
+compliazione:
+javac remover\*.java
+
+Esecizione:
+java -cp . remover.Main

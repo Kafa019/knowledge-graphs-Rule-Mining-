@@ -1,0 +1,7 @@
+Descrizione e Funzionamento di InverseRelationRemover
+
+A cosa serve: 
+InverseRelationRemover è il componente software concepito per la seconda configurazione sperimentale della tesi, il cui compito fondamentale è filtrare e rimuovere selettivamente le relazioni inverse dal Knowledge Graph e dai singoli split di addestramento e test, eliminando il fenomeno del Data Leakage.
+
+Cosa fa nel dettaglio: 
+La classe riceve in input una lista di triple RDF e scorre ciascun elemento verificandone il predicato. Attraverso un insieme predefinito (Set), il modulo riconosce esattamente le 5 relazioni inverse generate nella prima fase di costruzione, ovvero diagnosisOf, category3Of, category9Of, skinTypeOf e featureOf. Se una tripla presenta uno di questi predicati inversi, viene scartata e conteggiata (removed), mentre le restanti triple dirette vengono conservate in una nuova lista filtrata. Al termine dell'elaborazione, il modulo stampa a video un report riepilogativo indicando il numero di triple lette, quelle rimosse e quelle rimanenti.

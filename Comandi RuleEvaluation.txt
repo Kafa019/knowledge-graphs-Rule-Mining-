@@ -1,12 +1,11 @@
 Compilazione
-javac .\evaluation\*.java
+javac -d bin src\evaluation\*.java
 
 
 Esecuzione
-java -cp . evaluation.Main
+java -cp bin evaluation.RuleEvaluation
 
-
-java -Xmx8g -cp . evaluation.Main
+java -Xmx8g -cp bin evaluation.Main
 
 il comando avvia l'esecuzione del programma Java assegnandogli risorse adeguate:
 

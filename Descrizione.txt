@@ -1,0 +1,9 @@
+Descrizione e Funzionamento di RuleEvaluationA 
+
+cosa serve: 
+RuleEvaluation è il modulo software sviluppato ad hoc in linguaggio Java con l'obiettivo di automatizzare e uniformare l'analisi delle prestazioni dei modelli di Rule Mining (AnyBURL e AMIE 3). La sua funzione principale è consentire una comparazione prestazionale equa (apples-to-apples) tra strumenti aventi paradigmi differenti, calcolando metriche standardizzate basate sulla logica deduttiva.   
+
+Cosa fa nel dettaglio: 
+Il programma esegue le seguenti operazioni sequenziali:Parsing delle Regole: Legge e analizza il file contenente l'insieme delle regole logiche estratte (rules.txt).   
+	1.Caricamento degli Split: Acquisisce i file che compongono la struttura del Knowledge Graph (train.txt, valid.txt, test.txt).   	2.Applicazione Deduttiva: Applica formalmente la logica delle regole estratte sul dataset di test disgiunto per inferire nuove triple.   	3.Derivazione della Matrice di Confusione: Confronta le triple generate con le verità terrene (ground truth), calcolando puntualmente 	i True Positives (TP), i False Positives (FP) e i False Negatives (FN).   
+	4.Calcolo delle Metriche Finali: Ricava in modo rigoroso gli indicatori di prestazione globali, ovvero Precision, Recall ed F1-Score.

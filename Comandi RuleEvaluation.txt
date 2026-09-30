@@ -1,0 +1,19 @@
+Compilazione
+javac .\evaluation\*.java
+
+
+Esecuzione
+java -cp . evaluation.Main
+
+
+java -Xmx8g -cp . evaluation.Main
+
+il comando avvia l'esecuzione del programma Java assegnandogli risorse adeguate:
+
+java: Avvia la Java Virtual Machine (JVM).
+
+-Xmx8g: Alloca un massimo di 8 GB di RAM alla memoria heap, evitando errori di esaurimento memoria (OutOfMemoryError) durante l'elaborazione di Knowledge Graph di grandi dimensioni.
+
+-cp .: Specifica il classpath, dicendo alla JVM di cercare i file compilati nella cartella corrente (.).
+
+evaluation.Main: Indica la classe principale da eseguire all'interno del pacchetto di valutazione.

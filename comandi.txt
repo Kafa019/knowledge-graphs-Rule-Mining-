@@ -1,0 +1,8 @@
+Comandi per Avviarlo
+Trattandosi di una classe Java integrata all'interno del pacchetto di elaborazione, KnowledgeGraphBuilder viene avviato direttamente richiamando il flusso principale (Main.java) che gestisce l'intera pipeline di generazione del Knowledge Graph:
+
+Compilazione:
+javac -d bin src/kg/*.java
+
+Esecuzione:
+java -cp bin kg.Main

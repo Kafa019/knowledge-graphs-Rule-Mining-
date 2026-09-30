@@ -1,0 +1,13 @@
+Descrizione e Funzionamento di KnowledgeGraphBuilderA 
+
+cosa serve: 
+KnowledgeGraphBuilder è il modulo software fondamentale responsabile della trasformazione dei dati tabellari strutturati in un Knowledge Graph basato sul modello semantico RDF (Resource Description Framework). Il suo compito principale è convertire le informazioni cliniche dei pazienti in triple semantiche atomiche nella forma Soggetto–Predicato–Oggetto. 
+  
+Cosa fa nel dettaglio: 
+Scorrendo l'elenco dei casi clinici (SkinCase), la classe analizza ciascuna istanza e genera coppie di triple speculari:   
+
+	Triple Dirette Originali (ORIGINAL): Collegano l'identificativo dell'immagine (imageId) alle rispettive proprietà cliniche, producendo 	relazioni quali hasDiagnosis, hasCategory3, hasCategory9, hasSkinType e hasFeature. 
+  
+	Triple Inverse (INVERSE): Generano le relazioni speculari simmetriche (es. diagnosisOf, category3Of, category9Of, skinTypeOf, 	featureOf), indispensabili per la prima configurazione sperimentale e per lo studio del fenomeno del Data Leakage. 
+  
+	Normalizzazione: Il modulo applica una funzione di normalizzazione interna per pulire le stringhe testuali (rimuovendo spazi, 	trattini, virgole e caratteri speciali) per garantire la coerenza formale delle entità nel grafo.
